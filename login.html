@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="CSS/Style.css" />
+    <title>FonoPlay | Login</title>
+  </head>
+  <body>
+
+
+    <header>
+      <h1 class="titulo">FonoPlay</h1>
+      <nav class="menu">
+        <ul class="listaLinks">
+          <li class="itemNav">
+            <a class="linkNav" href="./index.html">Sobre</a>
+          </li>
+          <li class="itemNav">
+            <a class="linkNav" href="./login.html">Login</a>
+          </li>
+        </ul>
+      </nav>
+      <img src="ASSETS/perfil sem foto.jpg" alt="foto perfil" class="perfilLogin">
+    </header>
+
+
+    
+    <main>
+        <br class="espaco"><br class="espaco">
+        <div class = "container loginpagecontainer">
+
+            <h1 class = "nomeApresentacao">Log-in na plataforma FonoPlay</h1>
+
+
+                <div class = "flex">
+                    <input class = "inputLogin" type="radio" name="a|p" value="prof" checked>
+                    <label  class = "labelInput" for="prof" style="padding-right: 10%;">Fonoaudiólogo(a) </label>
+                    <input class = "inputLogin" type="radio" name="a|p" value="aluno">
+                    <label  class = "labelInput" for="aluno">Aluno(a)</label>
+
+                </div>
+
+            <br class = "espaco">
+
+                <label class = "labelInput"  for="user">Nome de usuário</label>
+                <input class = inputTexto type="text" name="username" id="username">
+
+            <br class = "espaco">
+
+                <label class = "labelInput" for="senha">Senha</label>
+                <input class = inputTexto type="password" name="senha" id="senha">
+
+                <submit class="botaologin" onclick="loginSelecionado()">Entrar</submit>
+
+                <script>
+                  function loginSelecionado() {
+                    var nomeUsuario = document.getElementById("username").value.trim();
+                    var senha = document.getElementById("senha").value.trim();
+
+                    var elemSelecionado = document.querySelector('input[name="a|p"]:checked');
+                    if (nomeUsuario == "" || senha == "") {
+                      alert("Preencha os campos de usuário e senha!")
+                    }
+                    else {
+                      if (elemSelecionado.value == "prof") {
+                        window.location.href = 'menuProf.html' 
+                      }
+                      else if (elemSelecionado.value == "aluno") {
+                        window.location.href = 'menuAluno.html'
+                      }
+                      else {
+                        alert("erro")
+                      }
+                    }
+                  }
+                </script>
+
+            <br class="espaco"><br class="espaco"><br class="espaco">
+            <p>Não tem uma conta? Crie a sua em <a href="www.gmail.com.br">Nosso email</a></p>
+        </div>
+
+      </div>
+      <br class="espaco"><br class="espaco">
+    </main>
+
+    <footer>
+      <div class="containerFooter">
+        <a class="linkFooter" href="https://www.linkedin.com/in/dev-rafael-dtn/"
+          ><img class="imgFooter" src="ASSETS/linkedin.png" alt="linkedin"
+        /></a>
+        <p class="info">
+          <b class ="black">Faça parte da equipe: </b><br />
+          Tel: +55(11)97696-7355 <br />
+          E-mail: contatoaopublico@fonoplay.com.br <br />
+        </p>
+        <a
+          class="linkFooter"
+          href="https://www.instagram.com/rafadtn.programador/"
+          ><img class="imgFooter" src="ASSETS/instagram.png" alt="instagram"
+        /></a>
+      </div>
+    </footer>
+  </body>
+</html>

@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="CSS/Style.css" />
+    <title>FonoPlay | Área do Profissional</title>
+</head>
+
+<body>
+
+
+
+    <header>
+        <h1 class="titulo">FonoPlay</h1>
+        <nav class="menu">
+            <ul class="listaLinks">
+                <li class="itemNav">
+                    <a class="linkNav" href="./index.html">Sobre</a>
+                </li>
+                <li class="itemNav">
+                    <a class="linkNav" href="./login.html">Login</a>
+                </li>
+            </ul>
+        </nav>
+        <img src="ASSETS/perfil sem foto.jpg" alt="perfil" class="perfilLogin">
+    </header>
+
+    <main>
+        <h1 class="listapacs">Perfil do paciente XXXXXXXXX</h1>
+
+        <div class = "container">
+            <form class = "novoPaciente">
+                <label for="NomeCrianca">Nome do Paciente</label>
+                <input name = "NomeCrianca" readonly id="NomeCrianca" type="text" value="XXXXXXXXX">
+                <br>
+                <label for="DataNascimento">Data de nascimento</label>
+                <input name = "DataNascimento" readonly id="DataNascimento" type="date" value="2021-01-01">
+                <br>
+                <label for="EmailPais">Email do(a) Responsável</label>
+                <input name = "EmailPais" id="EmailPais" readonly type="email" value="email@email.com">
+                <br>
+                <label for="TelefonePais">Telefone do(a) Responsável</label>
+                <input name = "TelefonePais" id="TelefonePais" readonly type="tel" value="(00) 0 0000-0000">
+                <br>
+                <p>Tags do paciente</p>
+                <div class = "tags">
+                    <label for="difr">Dificuldade com R</label>
+                    <input type="checkbox" name="Autismo (leve)" id="tags">
+                    <br>
+                    <label for="difs">Dificuldade com S</label>
+                    <input type="checkbox" name="Autismo (leve)" id="tags">
+                    <br>
+                    <label for="idd58">5-8 anos de idade</label>
+                    <input type="checkbox" name="Deficiência Visual" id="tags">
+                    <br>
+                    <label for="idd914">9-14 anos de idade</label>
+                    <input type="checkbox" name="TDAH" id="tags">
+                </div>
+
+                <button class="addNew" onclick="voltar()">Voltar</button>
+                <script>
+                    function voltar() {
+                        event.preventDefault();
+                        window.location.href = 'menuProf.html';
+                    }
+                </script>
+            </form>
+
+        </div>
+    </main>
+    <footer>
+        <div class="containerFooter">
+          <a class="linkFooter" href="https://www.linkedin.com"
+            ><img class="imgFooter" src="ASSETS/linkedin.png" alt="linkedin"
+          /></a>
+          <p class="info">
+            <b class ="black">Faça parte da equipe: </b><br />
+            Tel: +55(11)97696-7355 <br />
+            E-mail: contatoaopublico@fonoplay.com.br <br />
+          </p>
+          <a
+            class="linkFooter"
+            href="https://www.instagram.com"
+            ><img class="imgFooter" src="ASSETS/instagram.png" alt="instagram"
+          /></a>
+        </div>
+      </footer>
+</body>
+
+</html>
