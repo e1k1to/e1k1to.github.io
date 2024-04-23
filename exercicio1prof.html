@@ -36,14 +36,19 @@
                 <p>Exercício 1: Grave a seguinte frase: <br> <b style="font-size: 1.5em;">O rato roeu a roupa do rei de Roma</b></p>
 
                 <br class="espaco">
-                <label class="labelInput" for="user">Escute o áudio</label>
-                <div class="caixapr">
-                    <a>
-                    <img src="ASSETS/play.jpg" class="botaopr">
-                    <p>Clique aqui para ouvir a frase gravada pelo paciente.</p>
-                    </a>
-                    <br>
-                </div>
+
+                <label class="labelInput" for="user">Escute o áudio do enunciado abaixo:</label>
+                <br class="espaco">
+                <audio class="audio" src="./ASSETS/audio_enunciado.mp3" controls></audio>
+                
+                <br class="espaco">
+
+                <p>Clique no player abaixo para escutar o áudio do paciente.</p>
+                <br class="espaco">
+                <audio class="audio" src="./ASSETS/audio_paciente.mp3" controls></audio>
+                
+                <br class="espaco">
+
                 <label for="comentariosProf">Comentarios do profissional:</label>
                 <textarea maxlength="100"></textarea>
 
@@ -80,6 +85,8 @@
           /></a>
         </div>
       </footer>
+
+      <script src="./JS/ouvirAudio.js"></script>
 </body>
 
 </html>

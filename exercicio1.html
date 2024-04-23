@@ -36,23 +36,26 @@
                 <p>Exercício 1: Grave a seguinte frase: <br> <b style="font-size: 1.5em;">O rato roeu a roupa do rei de Roma</b></p>
 
                 <br class="espaco">
-                <label class="labelInput" for="user">Escute o áudio</label>
-                <div class="caixapr">
-                    <a>
-                    <img src="ASSETS/play.jpg" class="botaopr">
-                    <p>Clique aqui para ouvir a frase requisitada.</p>
+                <label class="labelInput" for="user">Escute o áudio do enunciado abaixo:</label>
+                <br class="espaco">
+                <audio class="audio" src="./ASSETS/audio_enunciado.mp3" controls></audio>
+
+                <br class="espaco">
+
+                <label class="labelInput" for="user">Sua vez! Clique no botão abaixo para gravar sua resposta!</label>
+                <br class="espaco">
+                <div style="width: 100%;">
+                    <a style=" left: 50%; top: 50%;">
+                    <button class="recordButton" id="recordButton"><img src="ASSETS/record.jpg"  class="botaopr"></button>
+                    <!-- <p>Sua vez! Clique no botão para gravar sua resposta!</p> -->
                     </a>
                 </div>
 
                 <br class="espaco">
+                <label class="labelInput" for="user" id="recordLabel">Escute o que você gravou:</label>
+                <br class="espaco">
+                <audio class="audio" id="audioPlayer" controls></audio>
 
-                <label class="labelInput" for="user">Agora grave:</label>
-                <div class="caixapr">
-                    <a>
-                    <img src="ASSETS/record.jpg" class="botaopr">
-                    <p>Sua vez! Clique aqui para gravar sua resposta!</p>
-                    </a>
-                </div>
             </div>
             <br class="espaco"><br class="espaco"><br class="espaco">
             <p>Está com dificuldades? Veja nossos videos-guia! <a href="www.gmail.com.br">Clique aqui</a></p>
@@ -85,6 +88,8 @@
           /></a>
         </div>
       </footer>
+
+      <script src="./JS/gravacaoAudio.js"></script>
 </body>
 
 </html>

@@ -603,6 +603,17 @@ textarea {
   color: black;
 }
 
+.recordButton {
+  background-color: rgba(255, 0, 0, 0);
+  border: none;
+}
+
+.recordButton:hover {
+  border: none;
+  transform: scale(1.1);
+  cursor: pointer;
+}
+
 @media screen and (max-width: 480px) {
   header {
     flex-direction: column;
